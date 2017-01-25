@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: error
+# key: error
+# binding: direct-keybinding
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+logger.error("${1}".format(${2}))

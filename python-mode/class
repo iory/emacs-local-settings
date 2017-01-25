@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: class
+# key: class
+# binding: direct-keybinding
+# --
+class ${1:MyClass}(${2:object}):
+    def __init__(self, ${3:*args}, ${4:**kwargs}):
+        print(self)
+    def __str__(self):
+        return "#<{0.__class__.__name__}>".format(self)
+    def __repr__(self):
+        return self.__str__()

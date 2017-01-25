@@ -1,0 +1,18 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: logging
+# key: logging
+# binding: direct-keybinding
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+###################
+# logger settings #
+###################
+import logging
+import colorlog
+
+handler = colorlog.StreamHandler()
+handler.setFormatter(colorlog.ColoredFormatter(
+    '%(log_color)s[%(levelname)s]:[%(asctime)s]: %(message)s'))
+logger = colorlog.getLogger('example')
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)

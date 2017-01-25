@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: time
+# key: time
+# --
+start = time()
+# process
+${0}
+end = time()
+print("Took %.3f seconds" % (end - start))

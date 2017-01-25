@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: ros_nodelet
+# key: ros_nodelet
+# --
+import rospy
+from jsk_topic_tools import ConnectionBasedTransport
+
+class ${1:class_name}(ConnectionBasedTransport):
+    def __init__(self):
+        super($1, self).__init__()
+
+    def subscribe(self):
+        pass
+    def unsubscribe(self):
+        for sub in self.subs:
+            sub.unregister()
+
+def main():
+    rospy.init_node('$1')
+    app = $1()
+    rospy.spin()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pf
+# key: pf
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# binding: direct-keybinding
+# --
+fmt.Printf("$0")

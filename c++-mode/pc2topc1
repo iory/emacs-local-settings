@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pc2topc1
+# key: pc2topc1
+# binding: direct-keybinding
+# --
+sensor_msgs::PointCloud2ConstPtr& cloud2
+pcl::PointCloudpcl::PointXYZRGB cloud1;
+pcl::fromROSMsg (*cloud2, cloud1);

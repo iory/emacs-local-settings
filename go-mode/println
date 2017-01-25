@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pn
+# key: pn
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# binding: direct-keybinding
+# --
+fmt.Println($0)

@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: class
+# key: class
+# binding: direct-keybinding
+# --
+class ${1:class_name} {
+public:
+    $1(){};
+    ~$1(){};
+    friend std::ostream& operator<< (std::ostream& os, const $1& cls) {
+        return os;
+    }
+private:
+};
+$0

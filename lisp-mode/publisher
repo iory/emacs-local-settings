@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: publisher
+# key: publisher
+# binding: direct-keybinding
+# --
+(ros::advertise "${1:topic-name}" ${2:pkg-name}::${3:msg-name} ${4:queue-size})
+(ros::publish "${5:topic}" ${6:msg-data})

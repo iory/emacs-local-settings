@@ -1,0 +1,18 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: template
+# key: template
+# binding: direct-keybinding
+# --
+<?xml version="1.0"?>
+<package>
+  <name>${1:package_name}</name>
+  <version>0.0.0</version>
+  <description>The $1</description>
+
+  <maintainer email="ab.ioryz@gmail.com">iory</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

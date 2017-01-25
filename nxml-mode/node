@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: node
+# key: node
+# --
+<node name="${1:name}"
+      pkg="${2:package_name}" type="${3:type}"
+      >
+</node>

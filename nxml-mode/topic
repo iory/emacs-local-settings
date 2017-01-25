@@ -1,0 +1,22 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: topic
+# key: topic
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# binding: direct-keybinding
+# --
+<arg name="MANAGER" default="${1:manager_name}_manager" />
+
+<arg name="CAMERA" default="camera_remote" />
+<arg name="IMAGE" default="image_rect_color" />
+<arg name="DEPTH_SPACE" default="depth_registered" />
+<arg name="RGB" value="rgb" />
+
+<arg name="INPUT_CLOUD" value="/$(arg CAMERA)/$(arg DEPTH_SPACE)/points" />
+<arg name="INPUT_CAMERA_INFO" value="/$(arg CAMERA)/$(arg RGB)/camera_info" />
+<arg name="INPUT_IMAGE" value="/$(arg CAMERA)/$(arg RGB)/$(arg IMAGE)" />
+
+<node name="$(arg MANAGER)"
+      pkg="nodelet" type="nodelet"
+      args="manager"
+      output="screen"
+      />

@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: rosparam
+# key: rosparam
+# binding: direct-keybinding
+# --
+<rosparam>
+  $0
+</rosparam>

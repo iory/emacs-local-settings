@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: main
+# key: main
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# binding: direct-keybinding
+# --
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+  $0
+}

@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ns
+# key: ns
+# binding: direct-keybinding
+# --
+<group ns="${1:namespace}">
+  $0
+</group>

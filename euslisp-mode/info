@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: info
+# key: info
+# --
+(ros::ros-info (format nil "${1:str}" ${2:arg}))

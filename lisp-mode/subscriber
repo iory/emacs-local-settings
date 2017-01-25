@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: subscriber
+# key: subscriber
+# binding: direct-keybinding
+# --
+(ros::subscribe "${1:topic-name}" ${1:pkg-name}::${2:msg-name} #'${3:func-name})

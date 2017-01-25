@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: subcap
+# key: subcap
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+\subcaption{}\label{fig:}

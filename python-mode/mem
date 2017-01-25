@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mem
+# key: mem
+# --
+self._${1:hoge} = ${2:$1}

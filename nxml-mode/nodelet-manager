@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: nodelet-manager
+# key: nodelet-manager
+# binding: direct-keybinding
+# --
+<node name="$1"
+      pkg="nodelet" type="nodelet"
+      args="load ${2:manager_name} $(arg MANAGER)">
+      ${0}
+</node>

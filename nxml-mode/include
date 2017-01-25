@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: include
+# key: include
+# --
+<include file="$(find ${1:package_name})/launch/${2:launch_file_name}">
+  <arg name="${3:name}" value="${4:value}"/>
+</include>

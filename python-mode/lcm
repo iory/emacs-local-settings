@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: lcm
+# key: lcm
+# binding: direct-keybinding
+# --
+def lcm(a, b):
+    return a // gcd(a, b) * b
