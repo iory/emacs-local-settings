@@ -1,0 +1,41 @@
+# -*- mode: snippet -*-
+# name: image_template
+# key: image
+# --
+#!/usr/bin/env python
+
+import cv2
+import numpy as np
+
+import rospy
+
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+from cv_bridge import CvBridgeError
+
+
+class ImageProcessing(object):
+    def __init__(self):
+        self._sub = rospy.Subscriber(
+            "~input", Image, self.callback, queue_size=1)
+        self._pub = rospy.Publisher("~output", Image, queue_size=1)
+        self.bridge = CvBridge()
+
+    def callback(self, msg):
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
+        except CvBridgeError as e:
+            print(e)
+        (rows, cols, channels) = cv_image.shape
+
+        try:
+            self._pub.publish(self.bridge.cv2_to_imgmsg(cv_image, "bgr8"))
+        except CvBridgeError as e:
+            print(e)
+
+
+if __name__ == "__main__":
+    rospy.init_node("image_processing")
+    ratmi = ImageProcessing()
+    rospy.spin()
+

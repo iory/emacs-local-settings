@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: euclidean_clustering
+# key: euclidean_clustering
+# --
+<node name="euclidean_clustering"
+      pkg="nodelet" type="nodelet"
+      args="load jsk_pcl/EuclideanClustering $(arg MANAGER)"
+      output="screen" clear_params="true">
+  <remap from="~input" to="$1" />
+  <rosparam>
+    tolerance: 0.1
+  </rosparam>
+</node>
