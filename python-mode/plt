@@ -3,4 +3,4 @@
 # key: plt
 # binding: direct-keybinding
 # --
-import matplotlib.plt as plt
+import matplotlib.pyplot as plt
