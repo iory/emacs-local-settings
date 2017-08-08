@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: debug
+# key: debug
+# --
+exec 5> debug_output.txt
+BASH_XTRACEFD="5"
+PS4='$LINENO: '
+set -x
