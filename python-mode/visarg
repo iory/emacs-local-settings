@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: visarg
+# key: visarg
+# --
+parser.add_argument('--vis', action='store_true', default=False)
